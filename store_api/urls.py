@@ -3,6 +3,7 @@ from store_api import views
 
 
 urlpatterns = [
+        url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
         url(r'^$', views.IndexView.as_view(), name='index'),
         url(r'^category/$', views.CategoryListView.as_view(), name='category'),
         url(r'^items/$', views.ItemListView.as_view(), name='item'),
